@@ -136,7 +136,7 @@ I want to make sure that I actually get a valid square before I place a block.  
             int blocks = 0;
             foreach (Location direction in fullDirections)
             {
-                if (!LocationValid(l + direction) &#124;&#124;
+                if (!LocationValid(l + direction) ||
                     GetSquare(l + direction).currentState == SquareState.Block)
                     blocks++;
             }
